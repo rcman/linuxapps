@@ -33,12 +33,13 @@ sudo apt install clamav -y
 sudo apt install clanav-daemon
 sudo apt install clamtk -y
 
-sudo systemctl stop clamav-freshclam
+sudo systemctl stop clamav-freshclam.service
 sudo freshclam
-https://database.clamav.net/daily.cvd
-sudo  cp daily.cvd /var/lib/clamav/daily.cvd
-sudo systemctl enable clamav-freshclam
-sudo systemctl start clamav-freshclam
+
+
+sudo systemctl enable clamav-freshclam.service
+sudo systemctl start clamav-freshclam.service
+
 
 
 
