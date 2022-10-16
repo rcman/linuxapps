@@ -28,8 +28,17 @@ sudo apt install vim -y
 sudo apt install remmina -y
 sudo apt install remmina-common -y
 sudo apt install remmina-plugin-rdp -y
-sudo apt install remmina-plugin-rdp -y
+sudo apt install git -y
 sudo apt install clamav -y
+sudo apt install clanav-daemon
 sudo apt install clamtk -y
+
+sudo systemctl stop clamav-freshclam
+sudo freshclam
+https://database.clamav.net/daily.cvd
+sudo  cp daily.cvd /var/lib/clamav/daily.cvd
+sudo systemctl enable clamav-freshclam
+sudo systemctl start clamav-freshclam
+
 
 
