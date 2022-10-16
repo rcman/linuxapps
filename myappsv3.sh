@@ -40,6 +40,8 @@ sudo freshclam
 sudo systemctl enable clamav-freshclam.service
 sudo systemctl start clamav-freshclam.service
 
+sed "\:egrep:a alias cls='clear'" .bashrc
+
 
 
 
