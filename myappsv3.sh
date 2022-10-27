@@ -30,7 +30,7 @@ sudo apt install remmina-common -y
 sudo apt install remmina-plugin-rdp -y
 sudo apt install git -y
 sudo apt install clamav -y
-sudo apt install clanav-daemon
+sudo apt install clamav-daemon
 sudo apt install clamtk -y
 
 sudo systemctl stop clamav-freshclam.service
@@ -40,7 +40,10 @@ sudo freshclam
 sudo systemctl enable clamav-freshclam.service
 sudo systemctl start clamav-freshclam.service
 
-sed "\:egrep:a alias cls='clear'" .bashrc
+echo "alias cls='clear'" > .bash_aliases
+echo "alias ll='ls -l --color'" >> .bash_aliases
+each "alias l='ls --color'" >> .bash_aliases
+
 
 
 
