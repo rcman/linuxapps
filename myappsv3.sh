@@ -44,6 +44,11 @@ echo "alias cls='clear'" > .bash_aliases
 echo "alias ll='ls -l --color'" >> .bash_aliases
 each "alias l='ls --color'" >> .bash_aliases
 
+sudo add-apt-repository ppa:bashtop-monitor/bashtop
+sudo apt update
+sudo apt install bashtop
+
+
 
 
 
