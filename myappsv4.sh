@@ -24,7 +24,7 @@ sudo apt install libsdl2-mixer-dev -y
 sudo apt install libsdl2-ttf-dev -y
 
 # this is the end of Dev Stuff
-
+echo "Installing all Dev tools SDL1, SDL2, Allegro4, Allegro5, Scons"
 sudo apt install mc -y
 sudo apt install scons -y
 sudo apt install gedit -y
@@ -46,8 +46,11 @@ sudo apt install tmux-plugin-manager -y
 sudo apt install tmux-themepack-jimesh -y
 sudo apt install tmuxp -y
 
+echo "Installing VNC Stuff"
+
 #VNC Stuff
 sudo apt-get install x11vnc net-tools -y
+echo "Enter VNC password"
 x11vnc -storepasswd 
 echo "# description "Start x11vnc on system boot" >> /etc/init/x11vnc.conf
 echo "description "x11vnc" >> /etc/init/x11vnc.conf
@@ -58,11 +61,13 @@ echo "respawn" >> /etc/init/x11vnc.conf
 echo "respawn limit 20 5" >> /etc/init/x11vnc.conf
 echo "exec /usr/bin/x11vnc -auth guess -forever -loop -noxdamage -repeat -rfbauth /home/rahul/.vnc/passwd -rfbport 5900 -shared" >> /etc/init/x11vnc.conf
 
-
+echo "Installing and downloading latest Virus Defenitions"
 sudo systemctl stop clamav-freshclam.service
 sudo freshclam
 sudo systemctl enable clamav-freshclam.service
 sudo systemctl start clamav-freshclam.service
+
+echo "Adding my Aliases"
 
 echo "alias cls='clear'" > ~/.bash_aliases
 echo "alias ll='ls -l --color'" >> ~/.bash_aliases
