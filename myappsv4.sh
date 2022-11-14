@@ -64,6 +64,7 @@ sudo add-apt-repository ppa:bashtop-monitor/bashtop
 sudo apt update
 sudo apt install snapd
 sudo apt install bashtop -y
+chmod +x ~/linuxapps/myappsv4.sh
 
 
 
