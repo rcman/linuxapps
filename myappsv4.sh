@@ -4,7 +4,6 @@ sudo apt install mc -y
 
 # All this stuff is for me to build with scons and c++
 sudo apt install build-essential -y
-sudo apt install liballeggl4 -y
 sudo apt install liballegro-acodec5-dev -y
 sudo apt install liballegro-audio5-dev -y
 sudo apt install liballegro-dialog5-dev -y
