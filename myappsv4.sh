@@ -10,7 +10,7 @@ sudo apt install liballegro-audio5-dev -y
 sudo apt install liballegro-dialog5-dev -y
 sudo apt install liballegro-image5-dev -y
 sudo apt install liballegro-ttf5-dev -y
-sudo apt install liballegro4-dev -y
+sudo apt install liballeggl4-dev -y
 sudo apt install liballegro5-dev -y
 sudo apt install libsdl-gfx1.2-dev -y
 sudo apt install libsdl-image1.2-dev -y
