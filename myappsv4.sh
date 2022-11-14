@@ -54,7 +54,7 @@ sudo systemctl start clamav-freshclam.service
 
 echo "alias cls='clear'" > ~/.bash_aliases
 echo "alias ll='ls -l --color'" >> ~/.bash_aliases
-each "alias l='ls --color'" >> ~/.bash_aliases
+echo "alias l='ls --color'" >> ~/.bash_aliases
 
 
 # For Linux Mint remove this line so you can use snap
