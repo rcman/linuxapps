@@ -59,10 +59,10 @@ each "alias l='ls --color'" >> ~/.bash_aliases
 
 # For Linux Mint remove this line so you can use snap
 sudo mv /etc/apt/preferences.d/nosnap.pref ~/Documents/nosnap.backup
-sudo apt install snapd
 
 sudo add-apt-repository ppa:bashtop-monitor/bashtop
 sudo apt update
+sudo apt install snapd
 sudo apt install bashtop -y
 
 
