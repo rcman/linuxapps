@@ -1,0 +1,76 @@
+How to install VNC on Linux Mint and it actually work
+
+
+TecAdmin
+
+    Home
+    Ubuntu 20.04
+    Tutorials
+    FeedBack
+    Submit Article
+    About Us
+
+Facebook
+Twitter
+Instagram
+Home»Linux Tutorials»How to Setup X11VNC Server on Ubuntu & LinuxMint
+How to Setup X11VNC Server on Ubuntu & LinuxMint
+RahulBy RahulOctober 5, 20152 Mins ReadUpdated:April 30, 2020
+
+X11VNC is the popular VNC server for creating remote desktop connection and access the remote desktop. It works will almost all the desktop environments available for Ubuntu and Debian based systems. Using remote desktop connection we can connect any remote system and access graphical user interface and work. We can use any available vnc viewer like the tight vnc viewer, real vnc viewer or ultra vnc viewer.
+
+X11VNC can be a better remote support software for you. This tutorial will help you to set up the x11vnc server on your Ubuntu, LinuxMint & Debian system and connect using vnc viewer from the client system.
+
+        Step 1 – Install X11VNC
+
+X11vnc packages are available under default repositories. Open a terminal and run the following commands to update default repositories and install required packages.
+
+sudo apt-get update
+sudo apt-get install x11vnc net-tools
+
+          Step 2 – Create Password
+
+Now create a password to connect using vnc viewer from the client system. This will not require any username to connect vnc.
+
+x11vnc -storepasswd 
+
+Enter VNC password: *********
+Verify password: *********  
+Write password to /home/rahul/.vnc/passwd?  [y]/n y
+Password written to: /home/rahul/.vnc/passwd
+
+      Step 3 – Start X11VNC Server
+
+After the successful installation of the x11vnc server on your system. Let’s start it using the following command. Change the parameters as per your setup.
+
+      sudo x11vnc -auth guess -forever -loop -noxdamage -repeat -rfbauth /home/rahul/.vnc/passwd -rfbport 5900 -shared
+
+The VNC server will start on default port 5900. In case the port 5900 is busy with some other service, it will automatically select the next available port like 5901.
+Step 4 – Connect from VNC Clinet
+
+To connect to the server using VNC, you need a VNC client on your system. For this tutorial, I am using RealVNC viewer on our system. You can use any other client of your choice.
+
+setup x11vnc on ubuntu
+Step 5 – Setup AutoStart on Boot
+
+Finally setup the auto start of x11vnc server on system boot. Create a x11vnc.conf file under /etc/init/ directory using following content.
+
+      sudo vi /etc/init/x11vnc.conf
+
+# description "Start x11vnc on system boot"
+
+description "x11vnc"
+
+start on runlevel [2345]
+stop on runlevel [^2345]
+
+console log
+
+respawn
+respawn limit 20 5
+
+exec /usr/bin/x11vnc -auth guess -forever -loop -noxdamage -repeat -rfbauth /home/rahul/.vnc/passwd -rfbport 5900 -shared
+
+Conclusion
+
+You can successfully configured VNC server on your Ubuntu or Debian system.
