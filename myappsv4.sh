@@ -46,6 +46,19 @@ sudo apt install tmux-plugin-manager -y
 sudo apt install tmux-themepack-jimesh -y
 sudo apt install tmuxp -y
 
+#VNC Stuff
+sudo apt-get install x11vnc net-tools -y
+x11vnc -storepasswd 
+echo "# description "Start x11vnc on system boot" >> /etc/init/x11vnc.conf
+echo "description "x11vnc" >> /etc/init/x11vnc.conf
+echo "start on runlevel [2345]" >> /etc/init/x11vnc.conf
+echo "stop on runlevel [^2345]" >> /etc/init/x11vnc.conf
+echo "console log" >> /etc/init/x11vnc.conf
+echo "respawn" >> /etc/init/x11vnc.conf
+echo "respawn limit 20 5" >> /etc/init/x11vnc.conf
+echo "exec /usr/bin/x11vnc -auth guess -forever -loop -noxdamage -repeat -rfbauth /home/rahul/.vnc/passwd -rfbport 5900 -shared" >> /etc/init/x11vnc.conf
+
+
 sudo systemctl stop clamav-freshclam.service
 sudo freshclam
 sudo systemctl enable clamav-freshclam.service
