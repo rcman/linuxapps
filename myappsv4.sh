@@ -1,6 +1,6 @@
 # Version 4.1
 
-sudo apt install mc -y
+
 
 # All this stuff is for me to build with scons and c++
 sudo apt install build-essential -y
