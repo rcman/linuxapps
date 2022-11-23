@@ -51,6 +51,7 @@ echo "Installing VNC Stuff"
 #VNC Stuff
 sudo apt-get install x11vnc net-tools -y
 echo "Enter VNC password"
+chmod 766 ~/.vnc/passwd
 x11vnc -storepasswd 
 echo "# description "Start x11vnc on system boot" >> /etc/init/x11vnc.conf
 echo "description "x11vnc" >> /etc/init/x11vnc.conf
@@ -60,6 +61,20 @@ echo "console log" >> /etc/init/x11vnc.conf
 echo "respawn" >> /etc/init/x11vnc.conf
 echo "respawn limit 20 5" >> /etc/init/x11vnc.conf
 echo "exec /usr/bin/x11vnc -auth guess -forever -loop -noxdamage -repeat -rfbauth /home/rahul/.vnc/passwd -rfbport 5900 -shared" >> /etc/init/x11vnc.conf
+
+touch /etc/systemd/system/x11vnc.service
+echo "[Unit]" >> /etc/systemd/system/x11vnc.service
+echo "Description=x11vnc remote desktop server" >> /etc/systemd/system/x11vnc.service
+echo "After=multi-user.target" >> /etc/systemd/system/x11vnc.service
+echo "Type=simple" >> /etc/systemd/system/x11vnc.service
+echo "ExecStart=/usr/bin/x11vnc -auth guess -forever -loop -noxdamage -repeat -rfbauth /home/per/.vnc/passwd -rfbport 5900 -shared" >> /etc/systemd/system/x11vnc.service
+echo "Restart=on-failure" >> /etc/systemd/system/x11vnc.service
+echo "[Install]" >> /etc/systemd/system/x11vnc.service
+echo "WantedBy=multi-user.target" >> /etc/systemd/system/x11vnc.service
+
+sudo systemctl daemon-reload
+sudo systemctl enable x11vnc
+sudo systemctl start x11vnc
 
 echo "Installing and downloading latest Virus Defenitions"
 sudo systemctl stop clamav-freshclam.service
@@ -81,7 +96,7 @@ sudo add-apt-repository ppa:bashtop-monitor/bashtop
 sudo apt update
 sudo apt install snapd
 sudo apt install bashtop -y
-chmod +x ~/linuxapps/myappsv4.sh
+chmod +x ~/linuxapps/*
 
 
 
