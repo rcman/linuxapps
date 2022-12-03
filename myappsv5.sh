@@ -53,25 +53,9 @@ sudo apt-get install x11vnc net-tools -y
 sudo echo "Enter VNC password"
 sudo hmod 766 ~/.vnc/passwd
 x11vnc -storepasswd 
-sudo echo "# description "Start x11vnc on system boot" >> /etc/init/x11vnc.conf
-sudo echo "description "x11vnc" >> /etc/init/x11vnc.conf
-sudo echo "start on runlevel [2345]" >> /etc/init/x11vnc.conf
-sudo echo "stop on runlevel [^2345]" >> /etc/init/x11vnc.conf
-sudo echo "console log" >> /etc/init/x11vnc.conf
-sudo echo "respawn" >> /etc/init/x11vnc.conf
-sudo echo "respawn limit 20 5" >> /etc/init/x11vnc.conf
-sudo echo "exec /usr/bin/x11vnc -auth guess -forever -loop -noxdamage -repeat -rfbauth /home/rahul/.vnc/passwd -rfbport 5900 -shared" >> /etc/init/x11vnc.conf
 
-sudo touch /etc/systemd/system/x11vnc.service
-sudo echo "[Unit]" >> /etc/systemd/system/x11vnc.service
-sudo echo "Description=x11vnc remote desktop server" >> /etc/systemd/system/x11vnc.service
-sudo echo "After=multi-user.target" >> /etc/systemd/system/x11vnc.service
-sudo echo "[Service]"
-sudo echo "Type=simple" >> /etc/systemd/system/x11vnc.service
-sudo echo "ExecStart=/usr/bin/x11vnc -auth guess -forever -loop -noxdamage -repeat -rfbauth /home/per/.vnc/passwd -rfbport 5900 -shared" >> /etc/systemd/system/x11vnc.service
-sudo echo "Restart=on-failure" >> /etc/systemd/system/x11vnc.service
-sudo echo "[Install]" >> /etc/systemd/system/x11vnc.service
-sudo echo "WantedBy=multi-user.target" >> /etc/systemd/system/x11vnc.service
+sudo cp x11vnc.conf /etc/init/x11vnc.conf
+sudo cp x11vnc.service /lib/systemd/system/x11vnc.service
 
 sudo systemctl daemon-reload
 sudo systemctl enable x11vnc
