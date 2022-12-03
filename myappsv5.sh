@@ -57,6 +57,8 @@ x11vnc -storepasswd
 sudo cp x11vnc.conf /etc/init/x11vnc.conf
 sudo cp x11vnc.service /lib/systemd/system/x11vnc.service
 
+cp .bash_aliases ~/.bash_aliases:wq
+
 sudo systemctl daemon-reload
 sudo systemctl enable x11vnc
 sudo systemctl start x11vnc
@@ -66,13 +68,6 @@ sudo systemctl stop clamav-freshclam.service
 sudo freshclam
 sudo systemctl enable clamav-freshclam.service
 sudo systemctl start clamav-freshclam.service
-
-echo "Adding my Aliases"
-
-echo "alias cls='clear'" > ~/.bash_aliases
-echo "alias ll='ls -l --color'" >> ~/.bash_aliases
-echo "alias l='ls --color'" >> ~/.bash_aliases
-
 
 # For Linux Mint remove this line so you can use snap
 sudo mv /etc/apt/preferences.d/nosnap.pref ~/Documents/nosnap.backup
