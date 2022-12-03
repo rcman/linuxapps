@@ -39,12 +39,6 @@ sudo apt install clamav -y
 sudo apt install clamav-daemon -y
 sudo apt install clamtk -y
 sudo apt install openssh-server -y
-sudo apt install sublime-text -y
-sudo apt install sublime-merge -y
-sudo apt install tmux -y
-sudo apt install tmux-plugin-manager -y
-sudo apt install tmux-themepack-jimesh -y
-sudo apt install tmuxp -y
 
 echo "Installing VNC Stuff"
 
