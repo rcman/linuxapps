@@ -49,13 +49,13 @@ sudo hmod 766 ~/.vnc/passwd
 x11vnc -storepasswd 
 
 sudo cp x11vnc.conf /etc/init/x11vnc.conf
-sudo cp x11vnc.service /lib/systemd/system/x11vnc.service
+sudo cp x11vnc.service /etc/system/systemd/x11vnc.service
 
-cp .bash_aliases ~/.bash_aliases:wq
+cp .bash_aliases ~/.bash_aliases
 
 sudo systemctl daemon-reload
-sudo systemctl enable x11vnc
-sudo systemctl start x11vnc
+sudo systemctl enable x11vnc.service
+sudo systemctl start x11vnc.service
 
 echo "Installing and downloading latest Virus Defenitions"
 sudo systemctl stop clamav-freshclam.service
