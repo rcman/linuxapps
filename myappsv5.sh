@@ -43,13 +43,16 @@ sudo apt install openssh-server -y
 echo "Installing VNC Stuff"
 
 #VNC Stuff
-sudo apt-get install x11vnc net-tools -y
+sudo apt-get -y remove vino
+sudo apt-get -y install x11vnc
+sudo mkdir /etc/x11vnc
+
 sudo echo "Enter VNC password"
 sudo hmod 766 ~/.vnc/passwd
 x11vnc -storepasswd 
 
-sudo cp x11vnc.conf /etc/init/x11vnc.conf
-sudo cp x11vnc.service /etc/system/systemd/x11vnc.service
+sudo x11vnc --storepasswd /etc/x11vnc/vncpwd
+sudo cp x11vnc.service /lib/systemd/system/x11vnc,service
 
 cp .bash_aliases ~/.bash_aliases
 
