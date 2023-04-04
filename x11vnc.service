@@ -1,12 +1,10 @@
 [Unit]
-Description=x11vnc service
-After=display-manager.service network.target syslog.target
+Description=Start x11vnc at startup.
+After=multi-user.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/x11vnc -forever -display :0 -auth guess -passwd yourPassword
-ExecStop=/usr/bin/killall x11vnc
-Restart=on-failure
+ExecStart=/usr/bin/x11vnc -auth guess -forever -noxdamage -repeat -rfbauth /etc/x11vnc/vncpwd -rfbport 5900 -shared
 
 [Install]
 WantedBy=multi-user.target
