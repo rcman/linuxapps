@@ -39,7 +39,7 @@ sudo apt install clamav -y
 sudo apt install clamav-daemon -y
 sudo apt install clamtk -y
 sudo apt install openssh-server -y
-
+sudo apt install gkrellm
 echo "Installing VNC Stuff"
 
 #VNC Stuff
