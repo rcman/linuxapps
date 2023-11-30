@@ -52,7 +52,7 @@ sudo hmod 766 ~/.vnc/passwd
 x11vnc -storepasswd 
 
 sudo x11vnc --storepasswd /etc/x11vnc/vncpwd
-sudo cp x11vnc.service /lib/systemd/system/x11vnc,service
+sudo cp x11vnc.service /lib/systemd/system/x11vnc.service
 
 cp .bash_aliases ~/.bash_aliases
 
@@ -75,8 +75,13 @@ sudo apt install snapd
 sudo apt install bashtop -y
 sudo chmod +x ~/linuxapps/*
 
+#setup Xscreensaver
 
+gsettings set org.cinnamon.desktop.session idle-delay 0 && gsettings set org.cinnamon.desktop.screensaver idle-activation-enabled false && gsettings set org.cinnamon.desktop.screensaver lock-enabled false
+sudo apt install xscreensaver xscreensaver-data-extra xscreensaver-gl xscreensaver-gl-extra
+sudo ln -sf /usr/bin/xscreensaver-command /usr/bin/cinnamon-screensaver-command
 
+echo "Make sure you setup startup apps. Name: xscreensaver    command: xscreensaver     Comment: whatever you want     STart Delay: 0    amd Save
 
 
 
