@@ -48,8 +48,7 @@ sudo apt-get -y install x11vnc
 sudo mkdir /etc/x11vnc
 
 sudo echo "Enter VNC password"
-sudo hmod 766 ~/.vnc/passwd
-x11vnc -storepasswd 
+sudo chmod 766 ~/.vnc/passwd
 
 sudo x11vnc --storepasswd /etc/x11vnc/vncpwd
 sudo cp x11vnc.service /lib/systemd/system/x11vnc.service
