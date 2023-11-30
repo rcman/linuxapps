@@ -73,7 +73,7 @@ sudo add-apt-repository ppa:bashtop-monitor/bashtop
 sudo apt update
 sudo apt install snapd
 sudo apt install bashtop -y
-sudo chmod +x ~/linuxapps/*
+sudo chmod +x ~/linuxapps/*.sh
 
 #setup Xscreensaver
 
@@ -81,7 +81,7 @@ gsettings set org.cinnamon.desktop.session idle-delay 0 && gsettings set org.cin
 sudo apt install xscreensaver xscreensaver-data-extra xscreensaver-gl xscreensaver-gl-extra
 sudo ln -sf /usr/bin/xscreensaver-command /usr/bin/cinnamon-screensaver-command
 
-echo "Make sure you setup startup apps. Name: xscreensaver    command: xscreensaver     Comment: whatever you want     STart Delay: 0    amd Save
+echo "Make sure you setup startup apps. Name: xscreensaver    command: xscreensaver     Comment: whatever you want     STart Delay: 0    amd Save"
 
 
 
