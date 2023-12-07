@@ -1,4 +1,4 @@
-# Version 4.3
+# Version 4.6
 
 
 
@@ -22,6 +22,7 @@ sudo apt install libsdl2-gfx-dev -y
 sudo apt install libsdl2-image-dev -y
 sudo apt install libsdl2-mixer-dev -y
 sudo apt install libsdl2-ttf-dev -y
+sudo apt install cloud-guest-utils -y
 
 # this is the end of Dev Stuff
 echo "Installing all Dev tools SDL1, SDL2, Allegro4, Allegro5, Scons"
@@ -39,12 +40,12 @@ sudo apt install clamav -y
 sudo apt install clamav-daemon -y
 sudo apt install clamtk -y
 sudo apt install openssh-server -y
-sudo apt install gkrellm
+sudo apt install gkrellm -y
 echo "Installing VNC Stuff"
 
 #VNC Stuff
-sudo apt-get -y remove vino
-sudo apt-get -y install x11vnc
+sudo apt remove vino -y
+sudo apt install x11vnc -y
 sudo mkdir /etc/x11vnc
 
 sudo echo "Enter VNC password"
@@ -70,7 +71,7 @@ sudo mv /etc/apt/preferences.d/nosnap.pref ~/Documents/nosnap.backup
 
 sudo add-apt-repository ppa:bashtop-monitor/bashtop
 sudo apt update
-sudo apt install snapd
+sudo apt install snapd -y
 sudo apt install bashtop -y
 sudo chmod +x ~/linuxapps/*.sh
 
