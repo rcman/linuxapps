@@ -1,6 +1,6 @@
-# Version 4.6
-
-
+# Version 5.3
+# Updated April 10th, 2024
+# This is run on my Linux Mint system that's why I add snap the way I do.
 
 # All this stuff is for me to build with scons and c++
 sudo apt install build-essential -y
@@ -23,6 +23,10 @@ sudo apt install libsdl2-image-dev -y
 sudo apt install libsdl2-mixer-dev -y
 sudo apt install libsdl2-ttf-dev -y
 sudo apt install cloud-guest-utils -y
+sudo apt install tree -y
+sudo apt install update-motd -y
+# mkdir ~/linixapps
+# cp up.sh ~/linuxapps/
 
 # this is the end of Dev Stuff
 echo "Installing all Dev tools SDL1, SDL2, Allegro4, Allegro5, Scons"
@@ -74,14 +78,13 @@ sudo apt update
 sudo apt install snapd -y
 sudo apt install bashtop -y
 sudo chmod +x ~/linuxapps/*.sh
-
+sudo cp anacrontab /etc/anacrontab
 #setup Xscreensaver
 
-gsettings set org.cinnamon.desktop.session idle-delay 0 && gsettings set org.cinnamon.desktop.screensaver idle-activation-enabled false && gsettings set org.cinnamon.desktop.screensaver lock-enabled false
-sudo apt install xscreensaver xscreensaver-data-extra xscreensaver-gl xscreensaver-gl-extra
-sudo ln -sf /usr/bin/xscreensaver-command /usr/bin/cinnamon-screensaver-command
+#gsettings set org.cinnamon.desktop.session idle-delay 0 && gsettings set org.cinnamon.desktop.screensaver idle-activation-enabled false && gsettings set org.cinnamon.desktop.screensaver lock-enabled false
+#sudo apt install xscreensaver xscreensaver-data-extra xscreensaver-gl xscreensaver-gl-extra
+#sudo ln -sf /usr/bin/xscreensaver-command /usr/bin/cinnamon-screensaver-command
 
 echo "Make sure you setup startup apps. Name: xscreensaver    command: xscreensaver     Comment: whatever you want     STart Delay: 0    amd Save"
-
 
 
