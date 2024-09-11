@@ -18,3 +18,21 @@ sudo apt scons  -y
 sudo apt neofetch  -y
 sudo apt openssh-server  -y
 sudo apt minicom -y
+sudo apt kmod -y
+sudo apt cpio -y
+sudo apt mkimage -y
+sudo apt gawk -y
+sudo apt clang -y
+sudo apt rustc -y
+sudo apt bindgen -y
+sudo apt binutils -y
+sudo apt pahole -y
+sudo apt jfsutils -y
+sudo apt btrfsck -y
+sudo apt reiserfsck -y
+sudo apt xfs_db -y
+sudo apt pccardctl -y
+sudo apt quota -y
+sudo apt procps -y
+sudo apt mcelog -y
+
