@@ -36,3 +36,6 @@ sudo apt quota -y
 sudo apt procps -y
 sudo apt mcelog -y
 sudo apt fsck.jfs -y
+sudo apt install linux-headers-$(uname -r) -y
+sudo apt install ccache -y
+sudo apt install make -y
