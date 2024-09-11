@@ -1,20 +1,20 @@
 sudo apt install git -y
-sudo apt fakeroot 
-sudo apt build-essential 
-sudo apt ncurses-dev 
-sudo apt xz-utils 
-sudo apt libssl-dev 
-sudo apt bc 
-sudo apt flex 
-sudo apt libelf-dev 
-sudo apt bison 
-sudo apt mc 
-sudo apt tree 
-sudo apt vim 
-sudo apt curl 
-sudo apt python3 
-sudo apt cmake 
-sudo apt scons 
-sudo apt neofetch 
-sudo apt openssh-server 
+sudo apt fakeroot  -y
+sudo apt build-essential  -y
+sudo apt ncurses-dev  -y
+sudo apt xz-utils  -y
+sudo apt libssl-dev  -y
+sudo apt bc  -y
+sudo apt flex  -y
+sudo apt libelf-dev  -y
+sudo apt bison  -y
+sudo apt mc  -y
+sudo apt tree  -y
+sudo apt vim  -y
+sudo apt curl  -y
+sudo apt python3  -y
+sudo apt cmake  -y
+sudo apt scons  -y
+sudo apt neofetch  -y
+sudo apt openssh-server  -y
 sudo apt minicom -y
