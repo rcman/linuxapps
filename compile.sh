@@ -35,4 +35,4 @@ sudo apt pccardctl -y
 sudo apt quota -y
 sudo apt procps -y
 sudo apt mcelog -y
-
+sudo apt fsck.jfs -y
