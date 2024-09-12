@@ -1,41 +1,41 @@
 sudo apt install git -y
-sudo apt fakeroot  -y
-sudo apt build-essential  -y
-sudo apt ncurses-dev  -y
-sudo apt xz-utils  -y
-sudo apt libssl-dev  -y
-sudo apt bc  -y
-sudo apt flex  -y
-sudo apt libelf-dev  -y
-sudo apt bison  -y
-sudo apt mc  -y
-sudo apt tree  -y
-sudo apt vim  -y
-sudo apt curl  -y
-sudo apt python3  -y
-sudo apt cmake  -y
-sudo apt scons  -y
-sudo apt neofetch  -y
-sudo apt openssh-server  -y
-sudo apt minicom -y
-sudo apt kmod -y
-sudo apt cpio -y
-sudo apt mkimage -y
-sudo apt gawk -y
-sudo apt clang -y
-sudo apt rustc -y
-sudo apt bindgen -y
-sudo apt binutils -y
-sudo apt pahole -y
-sudo apt jfsutils -y
-sudo apt btrfsck -y
-sudo apt reiserfsck -y
-sudo apt xfs_db -y
-sudo apt pccardctl -y
-sudo apt quota -y
-sudo apt procps -y
-sudo apt mcelog -y
-sudo apt fsck.jfs -y
+sudo apt install fakeroot  -y
+sudo apt install build-essential  -y
+sudo apt install ncurses-dev  -y
+sudo apt install xz-utils  -y
+sudo apt install libssl-dev  -y
+sudo apt install bc  -y
+sudo apt install flex  -y
+sudo apt install libelf-dev  -y
+sudo apt install bison  -y
+sudo apt install mc  -y
+sudo apt install tree  -y
+sudo apt install vim  -y
+sudo apt install curl  -y
+sudo apt install python3  -y
+sudo apt install cmake  -y
+sudo apt install scons  -y
+sudo apt install neofetch  -y
+sudo apt install openssh-server  -y
+sudo apt install minicom -y
+sudo apt install kmod -y
+sudo apt install cpio -y
+sudo apt install mkimage -y
+sudo apt install gawk -y
+sudo apt install clang -y
+sudo apt install rustc -y
+sudo apt install bindgen -y
+sudo apt install binutils -y
+sudo apt install pahole -y
+sudo apt install jfsutils -y
+sudo apt install btrfsck -y
+sudo apt install reiserfsck -y
+sudo apt install xfs_db -y
+sudo apt install pccardctl -y
+sudo apt install quota -y
+sudo apt install procps -y
+sudo apt install mcelog -y
+sudo apt install fsck.jfs -y
 sudo apt install linux-headers-$(uname -r) -y
 sudo apt install ccache -y
 sudo apt install make -y
