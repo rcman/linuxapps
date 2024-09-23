@@ -8,6 +8,7 @@ sudo apt install libssl-dev  -y
 sudo apt install dkms -y
 sudo apt install libpci-dev -y
 sudo apt install libiberty-dev -y
+sudo apt install libssl-dev -y
 sudo apt install autoconf -y
 sudo apt install llvm -y
 sudo apt install bc  -y
