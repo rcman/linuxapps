@@ -40,4 +40,5 @@ sudo apt install linux-headers-$(uname -r) -y
 sudo apt install ccache -y
 sudo apt install make -y
 sudo apt install fuse -y
+sudo apt install dwarves -y
 
