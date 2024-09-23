@@ -50,4 +50,5 @@ sudo apt install fuse -y
 sudo apt install dwarves -y
 sudo apt install openssl -y
 sudo apt install libudev-dev -y
-sudo apt install uuid -y
+sudo apt install uuid-dev -y
+sudo apt install swig -y
