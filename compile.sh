@@ -49,4 +49,4 @@ sudo apt install make -y
 sudo apt install fuse -y
 sudo apt install dwarves -y
 sudo apt install openssl -y
-
+sudo apt install libudev-dev -y
