@@ -2,8 +2,14 @@ sudo apt install git -y
 sudo apt install fakeroot  -y
 sudo apt install build-essential  -y
 sudo apt install ncurses-dev  -y
+sudo apt install libncurses-dev -y
 sudo apt install xz-utils  -y
 sudo apt install libssl-dev  -y
+sudo apt install dkms -y
+sudo apt install libpci-dev -y
+sudo apt install libiberty-dev -y
+sudo apt install autoconf -y
+sudo apt install llvm -y
 sudo apt install bc  -y
 sudo apt install flex  -y
 sudo apt install libelf-dev  -y
@@ -41,4 +47,5 @@ sudo apt install ccache -y
 sudo apt install make -y
 sudo apt install fuse -y
 sudo apt install dwarves -y
+sudo apt install openssl -y
 
