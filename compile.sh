@@ -42,7 +42,7 @@ sudo apt install pccardctl -y
 sudo apt install quota -y
 sudo apt install procps -y
 sudo apt install mcelog -y
-sudo apt install fsck.jfs -y
+sudo apt install fsck_jfs -y
 sudo apt install linux-headers-$(uname -r) -y
 sudo apt install ccache -y
 sudo apt install make -y
