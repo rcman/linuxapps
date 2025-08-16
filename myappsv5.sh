@@ -73,10 +73,6 @@ sudo systemctl start clamav-freshclam.service
 # For Linux Mint remove this line so you can use snap
 sudo mv /etc/apt/preferences.d/nosnap.pref ~/Documents/nosnap.backup
 
-sudo add-apt-repository ppa:bashtop-monitor/bashtop
-sudo apt update
-sudo apt install snapd -y
-sudo apt install bashtop -y
 sudo chmod +x ~/linuxapps/*.sh
 sudo cp anacrontab /etc/anacrontab
 #setup Xscreensaver
