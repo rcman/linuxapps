@@ -47,22 +47,7 @@ sudo apt install openssh-server -y
 sudo apt install gkrellm -y
 echo "Installing VNC Stuff"
 
-#VNC Stuff
-sudo apt remove vino -y
-sudo apt install x11vnc -y
-sudo mkdir /etc/x11vnc
-
-sudo echo "Enter VNC password"
-sudo chmod 766 ~/.vnc/passwd
-
-sudo x11vnc --storepasswd /etc/x11vnc/vncpwd
-sudo cp x11vnc.service /lib/systemd/system/x11vnc.service
-
 cp .bash_aliases ~/.bash_aliases
-
-sudo systemctl daemon-reload
-sudo systemctl enable x11vnc.service
-sudo systemctl start x11vnc.service
 
 echo "Installing and downloading latest Virus Defenitions"
 sudo systemctl stop clamav-freshclam.service
