@@ -4,13 +4,6 @@
 
 # All this stuff is for me to build with scons and c++
 sudo apt install build-essential -y
-sudo apt install liballegro-acodec5-dev -y
-sudo apt install liballegro-audio5-dev -y
-sudo apt install liballegro-dialog5-dev -y
-sudo apt install liballegro-image5-dev -y
-sudo apt install liballegro-ttf5-dev -y
-sudo apt install liballeggl4-dev -y
-sudo apt install liballegro5-dev -y
 sudo apt install libsdl-gfx1.2-dev -y
 sudo apt install libsdl-image1.2-dev -y
 sudo apt install libsdl-mixer1.2-dev -y
@@ -45,7 +38,6 @@ sudo apt install clamav-daemon -y
 sudo apt install clamtk -y
 sudo apt install openssh-server -y
 sudo apt install gkrellm -y
-echo "Installing VNC Stuff"
 
 cp .bash_aliases ~/.bash_aliases
 
