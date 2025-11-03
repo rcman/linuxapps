@@ -17,5 +17,10 @@ The app uses native Linux commands (ps aux for processes and systemctl for servi
 <BR>
 Install Java JDK
 <BR>
-Run javac *.java
+Run javac LinuxResourceMonitor.java
+<BR>
+java LinuxResourceMonitor
+<BR>
+
+A Gui should appear with the top processes
 
