@@ -14,3 +14,8 @@ Linux system with ps, systemctl commands
 May need to run with appropriate permissions to query some services
 
 The app uses native Linux commands (ps aux for processes and systemctl for services) to gather real-time resource usage data and displays it in sortable tables. The process monitoring focuses on CPU usage while service monitoring tracks memory consumption.
+<BR>
+Install Java JDK
+<BR>
+Run javac *.java
+
