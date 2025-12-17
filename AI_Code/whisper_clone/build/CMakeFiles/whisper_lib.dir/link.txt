@@ -1,0 +1,2 @@
+/usr/bin/ar qc libwhisper_lib.a CMakeFiles/whisper_lib.dir/src/audio_processor.cpp.o CMakeFiles/whisper_lib.dir/src/whisper_model.cpp.o CMakeFiles/whisper_lib.dir/src/utils.cpp.o
+/usr/bin/ranlib libwhisper_lib.a

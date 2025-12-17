@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/whisper_clone.dir/link.d CMakeFiles/whisper_clone.dir/src/main.cpp.o -o whisper_clone  libwhisper_lib.a

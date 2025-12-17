@@ -1,0 +1,8 @@
+/home/franco/claude-code/Claudev2-main/whisper_clome/build/CMakeFiles/whisper_lib.dir
+/home/franco/claude-code/Claudev2-main/whisper_clome/build/CMakeFiles/whisper_clone.dir
+/home/franco/claude-code/Claudev2-main/whisper_clome/build/CMakeFiles/edit_cache.dir
+/home/franco/claude-code/Claudev2-main/whisper_clome/build/CMakeFiles/rebuild_cache.dir
+/home/franco/claude-code/Claudev2-main/whisper_clome/build/CMakeFiles/list_install_components.dir
+/home/franco/claude-code/Claudev2-main/whisper_clome/build/CMakeFiles/install.dir
+/home/franco/claude-code/Claudev2-main/whisper_clome/build/CMakeFiles/install/local.dir
+/home/franco/claude-code/Claudev2-main/whisper_clome/build/CMakeFiles/install/strip.dir
