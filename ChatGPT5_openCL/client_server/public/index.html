@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Three Survival Multiplayer</title>
+  <style>
+    html,body { margin:0; height:100%; overflow:hidden; background:#111;}
+    #overlay {
+      position: absolute; left: 10px; top: 10px;
+      color: #fff; font-family: monospace; z-index: 10;
+      background: rgba(0,0,0,0.3); padding:8px; border-radius:6px;
+    }
+    #ui {
+      position: absolute; right: 10px; top: 10px; z-index: 10; color:#fff; font-family: sans-serif;
+      width:320px; max-width: calc(100% - 40px);
+    }
+    .panel { background: rgba(0,0,0,0.5); padding:8px; margin-bottom:8px; border-radius:6px;}
+    canvas { display:block; }
+  </style>
+</head>
+<body>
+  <div id="overlay">
+    <div>WASD move • Mouse look • E interact • I inventory • B build</div>
+    <div id="hint">Loading...</div>
+  </div>
+
+  <div id="ui">
+    <div class="panel" id="inventoryPanel">
+      <b>Inventory</b>
+      <div id="inventoryList">—</div>
+    </div>
+
+    <div class="panel" id="craftPanel">
+      <b>Crafting</b>
+      <div>
+        <button id="craftAxe">Craft Axe (10 wood)</button>
+        <button id="craftPick">Craft Pick (10 stone)</button>
+      </div>
+    </div>
+
+    <div class="panel" id="buildPanel">
+      <b>Build Mode</b> <span id="buildMode">OFF</span>
+      <div>
+        <button id="toggleBuild">Toggle B</button>
+        <div>Scroll wheel to rotate pieces</div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
