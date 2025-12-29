@@ -3,5 +3,5 @@
   "description": "Exposes window information via D-Bus for the Window Monitor application",
   "uuid": "window-introspect@focus",
   "shell-version": ["45", "46", "47", "48", "49"],
-  "version": 1
+  "version": 2
 }

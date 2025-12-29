@@ -100,9 +100,28 @@ export default class WindowIntrospectExtension {
         };
     }
 
+    /**
+     * Get window actors with compatibility for GNOME 45-49
+     * GNOME 48+: global.get_window_actors() moved to Meta.Compositor.get_window_actors()
+     * Access via global.compositor.get_window_actors()
+     */
+    _getWindowActors() {
+        // GNOME 48+ uses global.compositor.get_window_actors()
+        if (global.compositor && typeof global.compositor.get_window_actors === 'function') {
+            return global.compositor.get_window_actors();
+        }
+        // GNOME 45-47 uses global.get_window_actors()
+        if (typeof global.get_window_actors === 'function') {
+            return global.get_window_actors();
+        }
+        // Fallback: empty array
+        console.warn('Window Introspect: Unable to get window actors');
+        return [];
+    }
+
     GetWindows() {
         const windows = [];
-        const windowActors = global.get_window_actors();
+        const windowActors = this._getWindowActors();
 
         for (const actor of windowActors) {
             const metaWindow = actor.get_meta_window();
