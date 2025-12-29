@@ -1,13 +1,10 @@
-Just the apps I add to my default install. I really should be using Ajile.
+# Linux Apps
 
-The Linuxapps.sh installs all the SDL2 and Allegro Libraries along with other apps I use all the time. 
+<BR>
 
-It also sets up other things. You can remove what you do want and only install what you needs.
-
-The SConstruct file always resides in the base if the build directory. Make a src, release and include folder, put your src, inlude in the appropriate directories and place all your sound and pics in release and them just run scons.
-
-You make have to change your code to point to SDL2/SDL.h instead of just SDL.h and all other SDL libraries
-
-When compiling with addition includes make sure to check the SConstrct file as it has a section to include libraries on compile.
-
-
+***AI Code***--- Code to do with AI tools
+***OpenCL***--- OpenCL Code testing
+***Linux Resource Monitor***--- Monitor to show running services and the top services for load
+***Intel GPU***--- Intel GPU code I was testing
+***Wayland Focus***---An application that uses gnome shell extensions and an app written in C++ and SDL2 to show which current windows has focus and app in use
+***rc_commander***--- A clone of Norton Commander
