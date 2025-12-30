@@ -1,3 +1,11 @@
+
+<img width="505" height="494" alt="Screenshot From 2025-12-29 19-38-20" src="https://github.com/user-attachments/assets/2de38f9b-7872-48a9-9a44-9fc364ab6010" />
+
+
+
+<BR>
+
+
 # Wayland Window Monitor
 
 A window monitoring application for GNOME Wayland sessions that displays currently open windows with focus indication. Consists of an SDL2-based monitor application and a GNOME Shell extension that exposes window information via D-Bus.
