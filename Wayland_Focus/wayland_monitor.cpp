@@ -6,6 +6,9 @@
 #include <cstring>
 #include <cstdio>
 #include <algorithm>
+#include <unistd.h>
+#include <libgen.h>
+#include <limits.h>
 
 struct WindowInfo {
     std::string appId;
@@ -301,27 +304,25 @@ public:
             return;
         }
 
-        // Try common font paths
-        const char* fontPaths[] = {
-            "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
-            "/usr/share/fonts/dejavu-sans-fonts/DejaVuSans.ttf",
-            "/usr/share/fonts/TTF/DejaVuSans.ttf",
-            "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf",
-            "/usr/share/fonts/liberation-sans/LiberationSans-Regular.ttf",
-            "/usr/share/fonts/google-noto/NotoSans-Regular.ttf",
-            "/usr/share/fonts/noto/NotoSans-Regular.ttf",
-            nullptr
-        };
+        // Get executable directory and load font from there
+        char exePath[PATH_MAX];
+        ssize_t len = readlink("/proc/self/exe", exePath, sizeof(exePath) - 1);
+        if (len != -1) {
+            exePath[len] = '\0';
+            char* dirPath = dirname(exePath);
 
-        for (const char** path = fontPaths; *path && !font; path++) {
-            font = TTF_OpenFont(*path, 18);
+            // Construct font path: executable_dir/DejaVuSans.ttf
+            std::string fontPath = std::string(dirPath) + "/DejaVuSans.ttf";
+
+            font = TTF_OpenFont(fontPath.c_str(), 18);
             if (font) {
-                fontSmall = TTF_OpenFont(*path, 14);
+                fontSmall = TTF_OpenFont(fontPath.c_str(), 14);
             }
         }
 
         if (!font) {
-            fprintf(stderr, "Could not load any font\n");
+            fprintf(stderr, "Could not load font from executable directory\n");
+            fprintf(stderr, "Make sure 'DejaVuSans.ttf' is in the same directory as the executable\n");
             running = false;
             return;
         }
