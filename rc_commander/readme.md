@@ -1,3 +1,10 @@
+
+<img width="1030" height="730" alt="Screenshot From 2025-12-30 20-45-25" src="https://github.com/user-attachments/assets/d7d72955-c2e3-4be2-9851-81f54e893881" />
+
+
+<BR>
+
+
 # RC Commander v2.0
 
 A dual-pane file manager inspired by the classic Norton Commander, built in Java Swing.
